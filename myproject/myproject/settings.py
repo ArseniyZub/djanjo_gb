@@ -31,7 +31,7 @@ CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'aquaGb.pythonanywhere.com'
+    'aquaGb.pythonanywhere.com',
 ]
 
 
