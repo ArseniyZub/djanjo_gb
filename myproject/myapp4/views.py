@@ -1,9 +1,9 @@
-import logging
+# import logging
 from .forms import ImageForm, UserForm, ProductForm
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 def form_app4(request):
@@ -14,7 +14,7 @@ def form_app4(request):
             email = form.cleaned_data['email']
             age = form.cleaned_data['age']
             # Делаем что-то с данными
-            logger.info(f'Получили {name=}, {email=}, {age=}.')
+            # logger.info(f'Получили {name=}, {email=}, {age=}.')
     else:
         form = UserForm()
     return render(request, 'form_app4.html', {'form': form})

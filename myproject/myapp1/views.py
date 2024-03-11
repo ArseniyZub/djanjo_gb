@@ -33,5 +33,5 @@ def about(request):
      </html>
      """
  log_data = "Посещена страница 'о себе'"
- logging.info(log_data)
+#  logging.info(log_data)
  return HttpResponse(html)

@@ -2,9 +2,9 @@ from datetime import timedelta
 from django.utils import timezone
 
 from django.http import HttpResponse
-import logging
+# import logging
 
-logging.basicConfig(filename='app.log', level=logging.INFO)
+# logging.basicConfig(filename='app.log', level=logging.INFO)
 
 from django.shortcuts import render
 from .models import Client, Order
@@ -45,6 +45,6 @@ def index2(request):
         </html>
         """
     log_data = "Посещена страница myapp3"
-    logging.info(log_data)
+    # logging.info(log_data)
 
     return HttpResponse(html)
