@@ -2,7 +2,7 @@ from django.shortcuts import render
 import logging
 from django.http import HttpResponse
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 def index(request):
  html = """
@@ -17,7 +17,7 @@ def index(request):
      </html>
      """
  log_data = "Посещена главная страница"
- logger.info(log_data)
+#  logger.info(log_data)
  return HttpResponse(html)
 
 def about(request):
