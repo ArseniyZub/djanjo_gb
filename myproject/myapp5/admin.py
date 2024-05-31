@@ -1,6 +1,10 @@
 from django.contrib import admin
-from .models import Review, OrderComment
+from .models import CartItem, Review, OrderComment
 
+@admin.action(description="Сбросить количество в ноль")
+def reset_quantity(modeladmin, request, queryset):
+    queryset.update(quantity=0)
+    
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ['product', 'user_name', 'comment', 'published_date']
     ordering = ['-published_date']  
@@ -89,4 +93,5 @@ class CartItemAdmin(admin.ModelAdmin):
         ),
     ]
 admin.site.register(Review, ReviewAdmin)
-admin.site.register(OrderComment)
+admin.site.register(OrderComment, OrderCommentAdmin)
+admin.site.register(CartItem, CartItemAdmin)
