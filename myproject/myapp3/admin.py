@@ -17,9 +17,8 @@ class ProductAdmin(admin.ModelAdmin):
     search_help_text = 'Поиск по полю Описание продукта  (description)'
     actions = [reset_quantity]
 
-    # fields = ['name', 'description', 'added_date']
-    # readonly_fields = ['added_date', 'price']
-    readonly_fields = ['added_date']  # Удалено поле 'price' из readonly_fields
+
+    readonly_fields = ['added_date'] 
     fieldsets = [
         (
             None,
